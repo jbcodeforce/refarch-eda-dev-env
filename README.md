@@ -1,4 +1,4 @@
-# DA developer environment setup for mac
+# Event Driven Solution developer environment setup for mac
 
 Updated 9/9/2021: with the stop of using docker desktop, we need to install
 hyperekit and minikube:
@@ -29,3 +29,6 @@ eval $(minikube docker-env)
 ```sh
 kubectl apply -k minikube/strimzi/overlay/
 ```
+
+* Get IP address of the minikube vm: `minikube ip`, then set a 
+mapping in `/etc/hosts` for the kakfa bootstrap URL,  so a `quarkus dev` will be able to connect.
